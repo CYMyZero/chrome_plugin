@@ -23,9 +23,7 @@
     "permissions": [
         "storage",
         "tabs",
-        "http://*/",
-        "https://*/",
-        "chrome://*/"
+        "<all_urls>"
       ],
     "manifest_version": 2
 }

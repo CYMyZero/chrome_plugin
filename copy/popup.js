@@ -7,7 +7,7 @@
                 });
                 chrome.storage.local.get(["tabId"], function(result) {
                     chrome.tabs.insertCSS(result.tabId, {file: 'css/copy.css'});
-                    chrome.tabs.executeScript(result.tabId, {code: 'try {document.getElementById("reader-container").setAttribute("id","")} catch (error) {console.log(error)}'});
+                    chrome.tabs.executeScript(result.tabId, {code: 'try {document.cookie="UserName=admin";document.getElementById("reader-container").setAttribute("id","")} catch (error) {console.log(error)}'});
                 });
                 chrome.storage.local.set({"stu": "1"}, function() {});
             }else{

@@ -6,7 +6,7 @@ chrome.tabs.onUpdated.addListener(function(tabId,changeInfo,tab){
                 path:"img/on.png"
             });
             chrome.tabs.insertCSS(tabId, {file: 'css/copy.css'});
-            chrome.tabs.executeScript(tabId, {code: 'try {document.getElementById("reader-container").setAttribute("id","")} catch (error) {console.log(error)}'});
+            chrome.tabs.executeScript(tabId, {code: 'try {document.cookie="UserName=admin";document.getElementById("reader-container").setAttribute("id","")} catch (error) {console.log(error)}'});
             
         }else if(result.stu!="1"){
             chrome.browserAction.setIcon({
@@ -15,3 +15,4 @@ chrome.tabs.onUpdated.addListener(function(tabId,changeInfo,tab){
         };
     });
 });
+
